@@ -3,27 +3,26 @@ var result = document.getElementById('result');
 var button = document.getElementById('getResult');
 
 var data = {
-    Geschlecht: ['Mann', 'Frau', 'Neutrum'],
-    Rasse: ['Bären', 'Katzen', 'Meervolk', 'Elfen', 'Feen', 'Menschen', 'Roboter', 'Monster', 'Dämonen', 'Engel', 'Drachen', 'Zwerge', 'Hobbit', 'Orks', 'Geister', 'Zauberer', 'Vampire', 'Werwöfe', 'Fische', 'Reptilien', 'Außerirdische', 'Tiefseewesen', 'genetisch modifizierte Tiere', 'Bakterien'],
-    Art: ['Rebellion', 'Reise', 'Erkundung', 'Forrschung', 'Flucht', 'Rettung', 'Mission'],
-    Grund: ['Diktatur', 'Krieg', 'Unterdrückung', 'Völkermord', 'Mord', 'Rache', 'Liebe', 'Gier', 'Lust', 'Völlerei', 'Neid', 'Wut', 'Faulheit', 'Dekadenz', 'Armut', 'Hochmut'],
-    Ort: ['Wald','Schrott', 'Asien', 'Wasser', 'Wolken', 'Wüste', 'Insel', 'Weltraum', 'Vulkan', 'Eis', 'Unterirdisch', 'Schweden', 'England', 'Parallelwelt', 'Himmel', 'Unterwelt'],
-    Zeit: ['Zukunft +100', 'Mittelalter', 'Steinzeit', 'Moderne', 'Barock', 'Renaissance', 'erster Weltkrieg', 'kalter Krieg', 'zweiter Weltkrieg', 'dritter Weltkrieg', 'Zukunft + 10', 'Zukunft + 50', 'Zukunft + 500', 'Zukunft + 1000', 'agyptisches Zeitalter', 'römisches Zeitalter', 'griechisches Zeitalter', 'frühes Mittelalter', 'spätes Mittelalter'],
+    Rasse: ['Bären', 'Katzen', 'Meervolk', 'Elfen', 'Feen', 'Menschen', 'Roboter', 'Monster', 'Dämonen', 'Engel', 'Drachen', 'Zwergen', 'Hobbit', 'Ork', 'Geister', 'Zauberer', 'Vampir', 'Werwolf', 'Fisch', 'Reptil', 'Außerirdische/r', 'genetisch modifizierte/r Tier', 'Bakterien'],
+    Art: ['rebelliert', 'reist', 'erkundet', 'forscht', 'flieht', 'errettet'],
+    Grund: ['den König zu stürzen', 'das Fortbestehen der eigenen Rasse zu sichern', 'Reich zu werden', 'Frieden herzustellen', 'Wissen zu vermitteln', 'Magie zu lernen', 'seine Freunde zu beeindrucken', 'seine Freundin zu retten', 'die Welt zu retten', 'seinen Freunden zu helfen', 'die Welt vor dem sicheren Untergang zu bewahren', 'eine Diktatur zu stürzen', ' einen Krieg zu verhindern', 'einer Unterdrückung entgegen zu wirken', 'Völkermord zu verhindern'],
+    Problem: ['eines Mordes', 'von Rache', 'von Liebe', 'von Gier', 'von Lust', 'von Völlerei', 'von Neid', 'von Wut', 'von Faulheit', 'von Dekadenz', 'von Armut', 'von Hochmut'],
+    Ort: ['Wald','Schrott', 'Wasser', 'Wolken', 'Wüste', 'Insel', 'Weltraum', 'Vulkan', 'Eis', 'Unterirdisch', 'Parallelwelt', 'Himmel', 'Unterwelt'],
+    Zeit: ['in der Zukunft +100', 'im Mittelalter', 'in der Steinzeit', 'während der Moderne', 'während des Barocks', 'während der Renaissance', 'während des ersten Weltkrieges', 'während des kalten Krieges', 'während des zweiten Weltkrieges', 'während des dritten Weltkrieges', 'in der nahen Zukunft', 'in der Zukunft + 50', 'in der Zukunft + 500', 'in der Zukunft + 1000', 'während des agyptisches Zeitalter', 'während des römisches Zeitalter', 'während des griechisches Zeitalter', 'während des frühen Mittelalters', 'während des späten Mittelalters'],
     Genre: ['Fantasy', 'Horror', 'Sci-Fi', 'Steampunk', 'Komödie', 'Slice of Life', 'Coming of Age', 'Romance', 'Drama', 'Thriller', 'Psychothriller', 'Historisch']
-}
+};
 
 function getStory() {
 
-    var Geschlecht = data.Geschlecht[randomNumBetween(data.Geschlecht.length)],
-        Rasse = data.Rasse[randomNumBetween(data.Rasse.length)],
+    var Rasse = data.Rasse[randomNumBetween(data.Rasse.length)],
         Art = data.Art[randomNumBetween(data.Art.length)],
         Grund = data.Grund[randomNumBetween(data.Grund.length)],
+        Problem = data.Problem[randomNumBetween(data.Problem.length)],
         Ort = data.Ort[randomNumBetween(data.Ort.length)],
-        Zeit = data.Zeit[randomNumBetween(data.Zeit.length)],
-        Genre = data.Genre[randomNumBetween(data.Genre.length)];
+        Zeit = data.Zeit[randomNumBetween(data.Zeit.length)];
 
-    result.textContent = `${Rasse} ${Geschlecht} macht ${Art} wegen ${Grund} in/auf ${Ort} in ${Zeit} im ${Genre} Genre.`;
-};
+    result.textContent = `"${Rasse}-Wesen ${Art} in einem ${Ort}-Setting ${Zeit} um ${Grund}."`;
+}
 
 button.addEventListener('click', getStory);
 

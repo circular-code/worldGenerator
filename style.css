@@ -1,0 +1,92 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body, main {
+    height: 100%;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333333;
+    font-family: Roboto, sans-serif;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    background: white;
+    cursor: pointer;
+    margin: 2rem;
+}
+
+button:hover {
+    transition: background-color 0.5s ease-in-out;
+    background-color: blue;
+    color: white;
+}
+
+.result-wrapper {
+    background: #eaeaea;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -120px 0 0 -170px;
+    text-align: center;
+}
+
+main {
+    position: relative;
+}
+
+#result {
+    font-style: italic;
+    font-size: 1.5rem;
+}
